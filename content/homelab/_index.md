@@ -65,7 +65,7 @@ Entra ID sits under all four instead of being one of them. It's the tenant's ide
 {{< /rules >}}
 
 {{< wip title="Still cooking" >}}
-I'm building the lab and documenting it as it lands. Sanitized configs, policy exports and detection rules go up on [GitHub](https://github.com/SudoSaute) alongside it.
+I'm building the lab and documenting it as it lands. Sanitized configs, policy exports and detection rules go up on [GitHub](https://github.com/grcgeek) alongside it.
 
 The finished projects live in [Writeups]({{< ref "writeups" >}}).
 {{< /wip >}}
