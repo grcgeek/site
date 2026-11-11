@@ -3,7 +3,7 @@
        illustration. A project links to its writeup once one is published
        with `project:` set to the matching key.
 
-       {{< projects keys="defend,exposure,soc,purview" >}}
+       {{< projects keys="itgc,soc2,fedramp,tprm,msev" >}}
        | Project | What it proves | Uses |
        |---|---|---|
        | 1. SIEM deployment and dashboards | I can ... | Corporate, ... |
@@ -12,8 +12,10 @@
        keys: the program slots (data/program.yaml), in row order. Delete the
        shortcode lines and the table renders as a plain table again.
 
-       style: "tools" (default) draws each card's panel as a security glyph
-       (layouts/partials/lab/kit/<key>.svg) over the tools the project uses:
+       style: "tools" (default) draws each card's panel as the project's
+       illustration (layouts/partials/art/<key>.svg, the same one its writeup
+       gets; a glyph from layouts/partials/lab/kit/<key>.svg where there is
+       no illustration) over the tools the project uses:
        logos from assets/img/logos/ where the tool has one, a name tag where
        it does not. Each entry is "slug" (the logo, labelled with its <title>),
        "slug:Label" (the logo with your own label, for a product under one
@@ -26,12 +28,16 @@
       "atomic" (slice "text:Atomic Red Team" "microsoft:Defender for Endpoint")
       "phish"  (slice "microsoft:Defender for Office 365" "text:REMnux" "python")
       "ir"     (slice "hackthebox" "cyberdefenders" "microsoft:Defender XDR")
-      "intel"  (slice "text:ATT&CK" "microsoft:Threat analytics")
       "rules"  (slice "text:KQL" "text:YARA" "microsoft:Sentinel")
       "purview" (slice "microsoft:Purview" "microsoft:Compliance Manager" "text:DLP")
       "defend" (slice "microsoft:Defender for Endpoint" "microsoft:Defender for Office 365" "microsoft:Defender for Identity")
       "exposure" (slice "microsoft:Vulnerability Mgmt" "microsoft:Secure Score" "text:CISA KEV")
       "soc"    (slice "microsoft:Sentinel" "microsoft:Defender XDR" "text:KQL")
+      "itgc"   (slice "microsoft:Entra ID" "text:AD" "text:Sampling")
+      "soc2"   (slice "text:SOC 2 TSC" "text:Control matrix" "text:Policies")
+      "fedramp" (slice "text:800-53 Rev 5" "text:SSP" "text:POA&M")
+      "tprm"   (slice "text:SOC 2 report" "text:Bridge letter" "text:Questionnaire")
+      "msev"   (slice "microsoft:Compliance Manager" "microsoft:Power Automate" "microsoft:Power BI")
 -}}
 {{- $rows := slice -}}
 {{- range split (trim .Inner "\n ") "\n" -}}
@@ -53,7 +59,8 @@
   <article class="proj glass lit calm{{ if and (eq $style "tools") $kit }} proj--kit{{ end }}" data-nav>
     {{- if and (eq $style "tools") $kit }}
     <div class="stage kit" aria-hidden="true">
-      {{- with templates.Exists (printf "partials/lab/kit/%s.svg" $key) }}<span class="kit__glyph">{{ partial (printf "lab/kit/%s.svg" $key) $ }}</span>{{ end }}
+      {{- if templates.Exists (printf "partials/art/%s.svg" $key) }}<span class="kit__art">{{ partial (printf "art/%s.svg" $key) $ }}</span>
+      {{- else }}{{ with templates.Exists (printf "partials/lab/kit/%s.svg" $key) }}<span class="kit__glyph">{{ partial (printf "lab/kit/%s.svg" $key) $ }}</span>{{ end }}{{ end }}
       <span class="kit__marks">
         {{- range $kit }}
           {{- if hasPrefix . "text:" }}

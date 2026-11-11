@@ -17,3 +17,5 @@ Claude outputs/
 
 # Resume PDFs: tailored per role and never published from this repo
 content/resume/*.pdf
+# the public resume download is the one PDF in content/resume that is tracked
+!content/resume/Christian_Carrasco_Resume.pdf

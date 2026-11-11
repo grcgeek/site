@@ -3,11 +3,10 @@ title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 date: {{ .Date }}
 draft: true
 summary: "One sentence: what happened, how it was found, what stops it."
-project: ""          # seg, siem, atomic, phish, ir, intel, rules, vuln, ctf
+project: ""          # itgc, soc2, fedramp, tprm, msev, seg, ir, ctf
 art: ""              # optional; defaults to project
-skill: ""            # detection, response, network, vuln, ctf
+skill: ""            # audit, grc, detection, response, network, vuln, ctf
 tools: []
-attack: []
 source: "homelab"
 repo: ""
 images: []           # 00-cover.png, 1200x630
@@ -68,11 +67,11 @@ What it showed:
 <!-- SCREENSHOT (optional): decoded payload or tool output. Defang URLs first. -->
 {{ "{{<" }} figure src="05-step2-decode.png" alt="" caption="" {{ ">}}" }}
 
-## Attack flow
+## How it unfolded
 
 ```mermaid
 flowchart LR
-  A[Initial access] --> B[Execution] --> C[Persistence]
+  A[First sign] --> B[What it did] --> C[How it was stopped]
 ```
 
 ## Detection
@@ -99,12 +98,6 @@ False-positive notes:
 ## IOCs
 
 | Type | Value (defanged) | Context |
-|---|---|---|
-|  |  |  |
-
-## MITRE ATT&CK mapping
-
-| Tactic | Technique | Evidence |
 |---|---|---|
 |  |  |  |
 

@@ -1,0 +1,34 @@
+{{- /* Home "Skills & Tools": the tools in data/tools.yaml as a scrolling
+       strip, built like the original logo marquee (icon over label, no
+       boxes), in two rows that run in opposite directions. Each icon is a
+       drawn line glyph (layouts/partials/toolbox/glyph.html). Hovering an
+       icon redraws its lines in the tool's category colour; while the strip
+       is idle, assets/js/toolbox.js lights one icon at a time the same way.
+       Hover or focus pauses the rows. Reduced motion stops everything and
+       turns the rows into horizontal scrollers.
+       Styles: assets/css/site/51-toolbox.css.
+
+       {{< toolbox speed="90" >}}   speed: seconds for one full pass        */ -}}
+{{- $tools := site.Data.tools | default slice -}}
+{{- $speed := .Get "speed" | default "90" -}}
+<div class="tbx not-prose" role="group" aria-label="Skills and tools" tabindex="0" style="--tbx-speed: {{ $speed }}s;" data-tbx>
+  {{- range $r, $dir := slice "l" "r" }}
+  <div class="tbx__row tbx__row--{{ $dir }}">
+    <div class="tbx__track">
+      {{- range $pass := slice 1 2 }}
+      <ul class="tbx__group"{{ if eq $pass 2 }} aria-hidden="true"{{ end }}>
+        {{- range $i, $t := $tools }}{{ if eq (mod $i 2) $r }}
+        {{- $art := "" }}
+        {{- with $t.logo }}{{ with resources.Get (printf "img/logos/%s.svg" .) }}{{ $art = replaceRE `<title>.*?</title>` "" .Content | replaceRE "<svg" `<svg class="tb-glyph tb-glyph--logo" aria-hidden="true" focusable="false"` }}{{ end }}{{ end }}
+        {{- if not $art }}{{ $art = partial "toolbox/glyph.html" $t.glyph }}{{ end }}
+        <li class="tbx__item tbx--{{ $t.cat }}"><span class="tbx__ico">{{ $art | safeHTML }}</span><span class="tbx__name">{{ $t.name }}</span></li>
+        {{- end }}{{ end }}
+      </ul>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+</div>
+{{- with resources.Get "js/toolbox.js" | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+{{- end }}

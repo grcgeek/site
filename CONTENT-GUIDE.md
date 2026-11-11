@@ -9,7 +9,7 @@
 1. Pick its program slot: seg, siem, atomic, phish, ir, intel, rules, vuln or ctf.
 2. `hugo new content writeups/<short-name>/index.md` (lowercase, hyphens; the folder name is the URL).
 3. Fill the front matter: title, date, draft, summary (one sentence, shown on cards), project, art (optional),
-   skill (detection, response, network, vuln, ctf), tools, attack, source, repo, images (00-cover.png, 1200x630),
+   skill (detection, response, network, vuln, ctf), tools, source, repo, images (00-cover.png, 1200x630),
    pick and pick_reason (optional, for "Start here").
 4. Write it using the sections the template creates. Delete unused sections and screenshot slots.
    Keep Recommendations and Lessons learned.

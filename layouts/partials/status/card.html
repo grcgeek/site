@@ -4,13 +4,18 @@
        41-status.css; the glass highlight that follows the cursor is
        assets/js/status-fx.js. */ -}}
 {{- $s := partial "status/data.html" . -}}
-<section class="st-card" aria-label="Availability" data-st-light>
+<section class="st-card" aria-label="Status" data-st-light>
   <span class="st-card__fx" aria-hidden="true"><i></i><i></i><i></i></span>
   <div class="st-card__top">
     <span class="st-face st-face--lg">{{ with $s.faceL }}<img src="{{ . }}" width="56" height="56" alt="" decoding="async">{{ end }}<span class="st-dot st-dot--badge" aria-hidden="true"></span></span>
     <span><span class="st-card__k">Status</span><span class="st-card__t">{{ $s.text }}</span></span>
   </div>
+  {{- if $s.role }}
+  <p class="st-card__role">{{ $s.role }}{{ with $s.org }}<span class="st-card__org">{{ . }}</span>{{ end }}</p>
+  {{- with $s.sub }}<p class="st-card__sub">{{ . }}</p>{{ end }}
+  {{- else }}
   {{ with $s.roles }}<ul class="st-card__roles">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+  {{- end }}
   {{ with $s.linkedin }}<a class="st-card__cta" href="{{ . }}" target="_blank" rel="noopener noreferrer">Connect on LinkedIn<span aria-hidden="true">→</span></a>{{ end }}
 </section>
 {{- with resources.Get "js/status-fx.js" | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}

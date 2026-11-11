@@ -1,6 +1,6 @@
 ---
 title: "Resume"
-description: "Resume of Christian Carrasco: IT operations and security professional with Microsoft identity in production, compliance support across audits, and Defender XDR, Microsoft Sentinel and Purview on the lab roadmap."
+description: "Christian Carrasco's resume: IT Risk & Controls Analyst in security GRC at a cybersecurity company, after ten years in IT operations and security with control testing and audit evidence from the IT side."
 showDate: false
 showAuthor: false
 showReadingTime: false
@@ -12,59 +12,70 @@ build:
   publishResources: false
 ---
 
-{{< resume-head facts="Experience :: Ten Plus Years in Enterprise IT | Focus :: Security, Identity and IT Operations | Languages :: English and Spanish - Fluent | Studying :: SSCP and CISSP · Nov and Dec 2026" hook="Keeping *systems* resilient. Keeping *threats* out." >}}
-Ten plus years in enterprise IT, split between keeping production running and keeping it secure. I've led major incident management for Toyota Motor North America's production applications, run the SIEM in TelevisaUnivision's security operations center, and administered identity and access across Microsoft environments: Entra ID, Conditional Access, Active Directory, Exchange and Microsoft 365.
+{{< resume-head download="on" facts="Now :: IT Risk & Controls Analyst, Orlando | Experience :: Ten Plus Years in Enterprise IT | Languages :: English and Spanish, fluent | Studying :: SSCP Nov 2026 · CISSP next" hook="Ran the *systems*. Now I prove the *controls*." >}}
+IT Risk & Controls Analyst at a cybersecurity company in Orlando: audit evidence and compliance records, evidence requests with auditors, remediation and exception tracking, policies and review schedules, vendor reviews and continuous monitoring submissions, in a SOC 2 and FedRAMP world. Before that, ten plus years in enterprise IT, most of it in regulated environments, split between keeping production running and keeping it secure: major incident management for Toyota Motor North America's production applications, leading an engineering team, the SIEM in TelevisaUnivision's security operations center, and identity and access across Microsoft environments.
 
-Compliance has been part of that work from the IT side. I've supported audits and control testing, supplied access records and audit evidence, and helped see findings through to remediation across HIPAA, PCI DSS, ISO 27001 and NIST CSF. It's an area I enjoy and want to go deeper in, so I'm studying for it: the SSCP in November and the CISSP in December.
+I ran the systems auditors test before I tested any. As a security analyst I tested controls for design and operating effectiveness against NIST CSF, mapped them to PCI DSS, tracked findings and risk acceptance in ServiceNow, and handled auditor requests. As an Operations Manager I supported the annual ISO 27001 review, reviewed client AWS accounts for misconfigurations, automated cost and tagging reporting across 160+ of them, administered access and MFA policy, and owned change management, vendor contracts and SLA reporting. At Cigna, I supplied the access evidence behind HIPAA audit cycles.
 
-In my homelab I'm building out Defender XDR, Microsoft Sentinel and Purview, with a compliance project on the roadmap.
+That was the part of every job I kept volunteering for, so I made it the job. What I bring with it is the operations and stakeholder experience compliance teams usually have to hire around: getting evidence out of busy teams, delivering a finding nobody wants, and tracking remediation until it is closed. The SSCP is in November, the CISSP next, and the [lab]({{< ref "homelab" >}}) is where I go deeper than the day job allows.
 
 {{< /resume-head >}}
 
-## Microsoft Stack {.h-minor}
+## Controls I've Operated {.h-minor}
 
-{{< certs seal="false" class="certs--wide" groups="Used in production :: Microsoft Entra ID, Conditional Access and MFA, Active Directory, Group Policy, Exchange, Microsoft 365, Defender for Cloud Apps, Office 365 Security and Compliance | Lab roadmap :: Defender XDR, Microsoft Sentinel, Microsoft Purview, Entra ID Protection and PIM | Certified :: Microsoft Certified: Azure AI Fundamentals (AI-900)" >}}
+{{< certs seal="false" class="certs--wide" groups="Logical access :: Microsoft Entra ID, Conditional Access and MFA, Active Directory and Group Policy, Exchange permissions, Access and privileged account reviews, Joiner mover leaver, AWS IAM | Change management :: CAB-validated change procedure, Maintenance windows and releases, DNS and certificate change validation, Decommissioning with sign-off | IT operations :: Monitoring and alerting, Dynatrace and PagerDuty, Incident runbooks and escalation matrices, SOPs, Backup images and rebuild documentation | Compliance :: Control testing, Evidence collection, Findings and risk acceptance in ServiceNow, Audit requests" >}}
 
-Production means I ran it at work. The lab roadmap lives on my [Homelab]({{< ref "homelab" >}}) page, with a writeup as each piece lands.
+Grouped the way an IT general controls review groups them. Every item here is something I ran before I assessed any of it; the assessment side is on my [Homelab]({{< ref "homelab" >}}) page, with a writeup as each workpaper lands.
 
 ## Experience {.h-minor}
 
 {{< xp >}}
 
-{{< job company="Beyondsoft Consulting" dates="2021 to 2026" location="Remote" context="On assignment at Toyota Motor North America" >}}
-{{< role title="Operations Manager" dates="2023 to 2026" promoted="2023" tags="Change Management, Incident Management, ISO 27001, Problem Management, ServiceNow, SLA Management, Team Leadership, Vendor Management" >}}
-- Commanded high-impact production major incidents end to end: set severity against business impact, coordinated the response across teams, drove restoration, and briefed stakeholders.
-- Led a five-person engineering team, owning hiring, performance, and development with minimal turnover, along with the Dynatrace and PagerDuty vendor contracts and budget.
-- Owned SLA performance and incident metrics including MTTR, backlog, and repeat-incident rate, investigating breaches and driving corrective action plans to closure.
-- Led post-incident reviews and root cause analysis, turning recurring failures into runbook improvements, preventive controls, and problem records.
-- Supported the annual ISO 27001 compliance review, giving feedback on remediation plans and residual risk.
+{{< job company="A cybersecurity company" dates="2026 to now" location="Orlando, FL" context="Name to follow" >}}
+{{< role title="IT Risk & Controls Analyst" dates="Nov 2026 to now" tags="SOC 2, FedRAMP, Audit Evidence, Remediation Tracking, Vendor Reviews, Continuous Monitoring, Access Reviews, Policies" >}}
+- Collect, organize and maintain audit evidence and compliance records, and coordinate evidence requests and follow-ups with internal teams and auditors.
+- Track remediation tasks, findings, exceptions and deadlines, and maintain policies, procedures, review schedules and approval records.
+- Support vendor reviews (security reports, questionnaires and supporting documentation), continuous monitoring submissions, training records and access review documentation.
 {{< /role >}}
-{{< role title="Senior/Lead Technical Systems Analyst" dates="2021 to 2023" tags="Microsoft Entra ID, Conditional Access, MFA, AWS Security, AWS Shield, WAF, DNS, SSL/TLS, Dynatrace, PagerDuty, ServiceNow" >}}
-- Administered Microsoft Entra ID across client environments: users and groups, Conditional Access, MFA and password policies, and license audits and reviews, with authentication log reviews as part of access checks.
-- Audited client AWS accounts for technical debt and exploitable misconfigurations across IAM policies and security groups, tracking remediation to closure with application teams.
-- Responded to AWS Shield DDoS detections by tuning WAF rules and CloudFront configurations to mitigate attack traffic.
-- Owned DNS and SSL/TLS certificates across client domains, security-validating record changes before execution to prevent spoofing or hijacking.
-- Commanded high-impact production incidents from severity assignment through restoration and client communication.
+{{< /job >}}
+
+{{< job company="Beyondsoft Consulting" dates="2021 to 2026" location="Remote" context="On assignment at Toyota Motor North America" >}}
+{{< role title="Operations Manager" dates="2023 to 2026" promoted="2023" tags="ISO 27001, AWS Reporting Automation, Major Incident Management, Change Management, SLA Management, Vendor Management, Team Leadership, ServiceNow" >}}
+- Supported the annual ISO 27001 compliance review: reviewed each identified risk and its remediation plan, assessed remediation adequacy and residual risk, and gave written feedback to the compliance stakeholders running the assessment.
+- Automated cost and tagging reporting across 160+ client AWS accounts with Power Automate and AWS Lambda, covering tagging compliance and actual and forecast spend, replacing a manual pull that cost the team 25 to 30 hours a week with a repeatable, reviewable report.
+- Managed major incidents end to end: severity against business impact, response coordinated across IT, security and application teams, restoration, and executive and client communication through resolution.
+- Ran SLA performance as a recurring control: identified breaches, performed root cause analysis, assigned corrective action plans to control owners, and tracked them to closure, with MTTR, aging, backlog and repeat-incident reporting for leadership.
+- Coordinated change management for maintenance windows, change requests and releases, documenting scope, risk and approvals so work executed inside approved change windows.
+- Led the engineering team as its manager, owning hiring, performance and development with one hire in three to four years, and the Dynatrace and PagerDuty contracts: renewals, utilization reviews and spend against contracted limits.
+- Led post-incident reviews and root cause analysis, and kept the runbooks, escalation matrices and SOPs that made recurring work repeatable and auditable rather than person-dependent.
+{{< /role >}}
+{{< role title="Senior/Lead Technical Systems Analyst" dates="2021 to 2023" tags="Microsoft Entra ID, Conditional Access, MFA, Access Reviews, AWS IAM, Change Management, CAB, DNS, SSL/TLS, Dynatrace, PagerDuty" >}}
+- Administered logical access controls in Azure AD and Microsoft Entra ID: provisioning and deprovisioning, Conditional Access, MFA and password policy, license audits and periodic access reviews, with authentication log review to validate the controls operated as designed.
+- Assessed client AWS accounts for misconfigurations that could become exploitable, reviewing IAM policies, security groups and access configurations, documenting findings, and tracking remediation with application owners to closure.
+- Designed and documented a change management procedure for DNS record changes after finding the team reused prior tickets, validating approvers, approval counts, risk categorization and CAB requirements with governance.
+- Managed the SSL/TLS certificate lifecycle across client domains and validated DNS record changes against security requirements before execution, for continuous compliance and audit readiness.
+- Administered monitoring and alerting controls in Dynatrace and PagerDuty for production workloads: coverage onboarding, threshold tuning, and escalation and routing policies.
+- Led implementation of a self-hosted VPN on AWS for roughly 25 users, replacing an MSP-hosted service and saving over $30,000 a year, with MFA for every user and backup images and rebuild documentation as the recovery control.
 {{< /role >}}
 {{< /job >}}
 
 {{< job company="TelevisaUnivision" dates="2019 to 2020" location="Onsite then remote · Doral, FL" >}}
-{{< role title="Information Security Analyst" tags="LogRhythm, SIEM Engineering, Detection Rules, MITRE ATT&CK, Microsoft 365, Defender for Cloud Apps, NIST CSF, PCI DSS, ServiceNow, Vulnerability Management" >}}
-- Triaged SIEM alerts across networks, endpoints, and servers, correlating events to reconstruct incident timelines.
-- Investigated spear-phishing campaigns aimed at senior staff and delivered end user security awareness training.
-- Lead LogRhythm administrator: built correlation rules, wrote custom parsers for malformed log sources, and mapped detection coverage to MITRE ATT&CK.
-- Planned and executed the SIEM migration onto a restructured server architecture, then validated coverage so monitoring did not silently degrade.
-- Worked in Microsoft Defender for Cloud Apps (then Cloud App Security) and the Office 365 Security and Compliance Center, whose compliance tools are now Microsoft Purview.
-- Supported PCI DSS audit and control testing.
+{{< role title="Information Security Analyst" tags="Control Testing, NIST CSF, PCI DSS, ServiceNow, Access Reviews, Vulnerability Management, Risk Acceptance, LogRhythm" >}}
+- Tested security controls for design and operating effectiveness against NIST CSF, mapped them to PCI DSS requirements to surface overlap and gaps, and coordinated audit evidence, documentation and auditor requests for security tooling through audit cycles.
+- Tracked control testing and remediation in ServiceNow, correlating findings to the CMDB to assign control owners, driving items to closure, and collecting closure evidence and log extracts for internal audit and compliance stakeholders.
+- Ran the vulnerability remediation and exception process: identified owning teams, assessed exploitability and business impact, followed up on exception requests, documented formal risk acceptance, and remediated directly on systems the security team managed.
+- Performed user access reviews and reviewed administrative and privileged account configurations to verify least-privilege adherence.
+- Maintained log retention against compliance requirements and kept detection logic, tuning rationale and runbooks documented so the monitoring controls were auditable and continuous.
+- Lead LogRhythm SIEM administrator: correlation rules, custom parsers, detection coverage reviews, a SIEM migration with coverage validated after it, and spear-phishing investigations aimed at senior staff.
 {{< /role >}}
 {{< /job >}}
 
 {{< job company="Cigna HealthCare" dates="2014 to 2019" location="Hybrid · Doral, FL" >}}
-{{< role title="Technical Support Analyst" tags="Active Directory, Azure AD, Exchange, Group Policy, MFA, HIPAA, Endpoint Detection and Response, MDM, Disaster Recovery" >}}
-- Administered Active Directory and Azure AD (now Microsoft Entra ID), Exchange permissions, Group Policy, and MFA, applying least privilege at provisioning and treating revocation at termination as a controlled step.
-- Level 3 escalation point for a support team of four serving roughly 350 employees in a HIPAA-regulated environment.
-- Built the standard PXE images and SOPs behind onboarding and offboarding, and deployed endpoint detection and antivirus agents.
-- Supplied access records and audit evidence through HIPAA audit cycles to business owners and internal auditors.
+{{< role title="Technical Support Analyst" tags="HIPAA, Access Administration, Active Directory, Exchange, Group Policy, SCCM, Onboarding and Offboarding, Level 3 Support" >}}
+- Supported HIPAA audit requirements in an environment built around FACETS, the core patient information system, providing access records and evidence to compliance and audit teams on request and enforcing policy and control standards in daily administration.
+- Administered logical access: role-based provisioning under least privilege, timely revocation on termination as a controlled, documented offboarding step, and the SOPs for provisioning and deprovisioning.
+- Administered Active Directory, Exchange permissions and Group Policy, and deployed antivirus, threat detection and DLP clients and security patches across endpoints with SCCM.
+- Level 3 escalation point for a team of four supporting about 350 employees at 30 to 60 tickets a day within SLA, mentoring junior technicians and writing the knowledge base articles that reduced repeat escalations.
 {{< /role >}}
 {{< /job >}}
 
@@ -79,15 +90,15 @@ Production means I ran it at work. The lab roadmap lives on my [Homelab]({{< ref
 
 ## Certifications {.h-minor}
 
-{{< certs class="certs--wide" groups="Active :: Microsoft Certified: Azure AI Fundamentals ~ active ~ 2024, LPI Linux Essentials ~ active ~ Lifetime, CompTIA Project+ ~ active ~ Lifetime, CompTIA Cloud Essentials+ ~ active ~ Lifetime | In progress :: ISC2 SSCP ~ progress ~ Target Nov 2026, ISC2 CISSP ~ progress ~ Target Dec 2026 | Previously held :: Cisco CCNA Routing & Switching ~ held ~ 2020 to 2023, CompTIA Security+ ~ held ~ 2019 to 2022, EC-Council Certified Ethical Hacker (CEH) ~ held ~ 2019 to 2022, AWS Certified Cloud Practitioner ~ held ~ 2019 to 2022, CompTIA A+ ~ held ~ 2018 to 2022, ITIL 4 Foundation ~ held ~ 2019 to 2023" >}}
+{{< certs class="certs--wide" groups="In progress :: ISC2 SSCP ~ progress ~ Exam Nov 2026, ISC2 CISSP ~ progress ~ Next · 2027 | Active :: LPI Linux Essentials ~ active ~ Lifetime, CompTIA Project+ ~ active ~ Lifetime, CompTIA Cloud Essentials+ ~ active ~ Lifetime, Azure AI Fundamentals (AI-900) ~ active ~ 2024 | Previously held :: Cisco CCNA Routing & Switching ~ held ~ 2020 to 2023, CompTIA Security+ ~ held ~ 2019 to 2022, Certified Ethical Hacker (CEH) ~ held ~ 2019 to 2022, AWS Certified Cloud Practitioner ~ held ~ 2019 to 2022, CompTIA A+ ~ held ~ 2018 to 2022, ITIL 4 Foundation ~ held ~ 2019 to 2023" >}}
 
 ## Compliance and Frameworks {.h-minor}
 
-{{< certs seal="false" class="certs--wide" groups="Regulatory :: CMS, HIPAA, ISO 27001, PCI DSS | Frameworks :: ITIL v4, MITRE ATT&CK, NIST CSF | Hands-on support :: Control testing, User access reviews, Risk acceptance on exceptions, Findings tracked to closure in ServiceNow, Audit evidence" >}}
+{{< certs seal="false" class="certs--wide" groups="Programs :: SOC 2, FedRAMP, ISO 27001, PCI DSS, HIPAA, CMS | Frameworks :: NIST SP 800-53, NIST CSF, ITIL v4, NIST SP 800-171 (self-study) | Controls work :: Control testing for design and operating effectiveness, Control mapping, Audit evidence and workpapers, User access reviews, Findings and exceptions tracked to closure, Vendor reviews, Continuous monitoring" >}}
 
 ## Tools and Platforms {.h-minor}
 
-{{< certs seal="false" class="certs--wide" groups="Microsoft :: Microsoft Entra ID, Conditional Access, Active Directory, Group Policy, Exchange, Microsoft 365, Microsoft Defender for Cloud Apps, Office 365 Security and Compliance (now Purview), Windows Server, Hyper-V, Microsoft Azure | Security :: LogRhythm, Sophos, Cylance, Check Point, Cisco Umbrella, Imperva, Vulnerability Management, Wireshark | Cloud :: Amazon CloudFront, Amazon Route 53, AWS Shield and WAF | Operations :: ServiceNow, Dynatrace, PagerDuty, Jenkins, KACE, Password Safe, FACETS | Infrastructure :: Linux, PXE imaging, VMware" >}}
+{{< certs seal="false" class="certs--wide" groups="GRC, ITSM and audit :: ServiceNow (ticketing and CMDB), Remediation tracking, Excel analysis and sampling, Purview Compliance Manager (lab), Power Automate, AWS Lambda | Microsoft :: Microsoft Entra ID, Conditional Access, Active Directory, Group Policy, Exchange, Microsoft 365, Microsoft Defender for Cloud Apps, Office 365 Security and Compliance (now Purview), Windows Server, Hyper-V, Microsoft Azure | Security :: LogRhythm, Sophos, Cylance, Check Point, Cisco Umbrella, Imperva, Vulnerability Management, Wireshark | Cloud :: AWS IAM, Amazon CloudFront, Amazon Route 53, AWS Shield and WAF, Site-to-Site VPN | Operations :: Dynatrace, PagerDuty, Jenkins, SCCM, KACE, Password Safe, FACETS | Infrastructure :: Linux, PXE imaging, VMware" >}}
 
 ## Education and Competitions {.h-minor}
 

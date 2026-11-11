@@ -1,0 +1,71 @@
+# Skills & Tools on Home (layouts/shortcodes/toolbox.html).
+#
+# name:  what the tile says
+# cat:   grc, identity, security, cloud, ops, lab (sets the chip and the colour edge)
+# glyph: a drawing from layouts/partials/toolbox/glyph.html
+# logo:  optional. A file name in assets/img/logos/ (without .svg) to show
+#        your own logo on this tile instead of the drawn glyph
+# did:   one line for the card: what you did with it
+# where: optional. Leave it out when the resume doesn't tie the tool to a job;
+#        the card then shows no employer rather than a guess
+# when:  optional, shown after where
+# Order sets the order in the rows and the grid.
+
+- { name: "SOC 2",              cat: grc,      glyph: seal,      did: "Audit evidence, requests and follow-ups in a SOC 2 program", where: "Current role", when: "2026 to now" }
+- { name: "FedRAMP",            cat: grc,      glyph: flag,      did: "Continuous monitoring submissions and the evidence behind them", where: "Current role", when: "2026 to now" }
+- { name: "NIST SP 800-53",     cat: grc,      glyph: book,      did: "The control baseline under FedRAMP, and the lab's readiness assessment", where: "Current role and the lab" }
+- { name: "ISO 27001",          cat: grc,      glyph: seal,      did: "Annual review: identified risks, remediation plans and residual risk", where: "Toyota, via Beyondsoft", when: "2023 to 2026" }
+- { name: "NIST CSF",           cat: grc,      glyph: grid,      did: "Tested security controls for design and operating effectiveness", where: "TelevisaUnivision", when: "2019 to 2020" }
+- { name: "PCI DSS",            cat: grc,      glyph: card,      did: "Mapped tested controls to PCI DSS requirements to find overlap and gaps", where: "TelevisaUnivision", when: "2019 to 2020" }
+- { name: "HIPAA",              cat: grc,      glyph: cross,     did: "Access records and evidence for compliance and audit teams", where: "Cigna HealthCare", when: "2014 to 2019" }
+- { name: "ServiceNow",         cat: grc,      glyph: ticket,    did: "Findings and remediation tied to CMDB owners; tickets and asset records", where: "TelevisaUnivision, Toyota, Commonwealth-Altadis" }
+- { name: "Excel",              cat: grc,      glyph: table,     did: "Analysis, populations, samples and workpapers" }
+
+- { name: "Entra ID",           cat: identity, glyph: badge,     did: "Provisioning, deprovisioning, license audits and periodic access reviews", where: "Toyota, via Beyondsoft", when: "2021 to 2023" }
+- { name: "Conditional Access", cat: identity, glyph: gate,      did: "Conditional Access, MFA and password policy, checked against sign-in logs", where: "Toyota, via Beyondsoft", when: "2021 to 2023" }
+- { name: "Active Directory",   cat: identity, glyph: tree,      did: "Role-based accounts, OU changes and documented offboarding", where: "Cigna HealthCare, Commonwealth-Altadis", when: "2013 to 2019" }
+- { name: "Group Policy",       cat: identity, glyph: policy,    did: "Endpoint policy and standards in daily administration", where: "Cigna HealthCare", when: "2014 to 2019" }
+- { name: "Exchange",           cat: identity, glyph: mail,      did: "Mailbox and permission administration", where: "Cigna HealthCare", when: "2014 to 2019" }
+- { name: "Microsoft 365",      cat: identity, glyph: apps,      did: "The productivity suite around Entra ID and Exchange; the lab's company runs on one" }
+
+- { name: "LogRhythm",          cat: security, glyph: radar,     did: "Lead SIEM admin: correlation rules, parsers, log retention and a migration", where: "TelevisaUnivision", when: "2019 to 2020" }
+- { name: "Vulnerability Mgmt", cat: security, glyph: bug,       did: "Owners, exploitability, exceptions and risk acceptance from scanner findings", where: "TelevisaUnivision", when: "2019 to 2020" }
+- { name: "Sophos",             cat: security, glyph: endpoint,  did: "Endpoint protection", where: "TelevisaUnivision", when: "2019 to 2020" }
+- { name: "Cylance",            cat: security, glyph: endpoint,  did: "Endpoint protection", where: "TelevisaUnivision", when: "2019 to 2020" }
+- { name: "Check Point",        cat: security, glyph: wall,      did: "Firewall" }
+- { name: "Cisco Umbrella",     cat: security, glyph: umbrella,  did: "DNS-layer security" }
+- { name: "Imperva",            cat: security, glyph: webshield, did: "Web application protection" }
+- { name: "Defender for Cloud Apps", cat: security, glyph: eye,  did: "Cloud app visibility and policy" }
+- { name: "Wireshark",          cat: security, glyph: wave,      did: "Packet capture and traffic analysis" }
+
+- { name: "AWS IAM",            cat: cloud,    glyph: key,       did: "Misconfiguration reviews: IAM policies, security groups, access settings", where: "Toyota, via Beyondsoft", when: "2021 to 2023" }
+- { name: "AWS Lambda",         cat: cloud,    glyph: lambda,    did: "Cost and tagging reporting across 160+ client accounts", where: "Toyota, via Beyondsoft", when: "2023 to 2026" }
+- { name: "Route 53",           cat: cloud,    glyph: globe,     did: "DNS" }
+- { name: "CloudFront",         cat: cloud,    glyph: edge,      did: "Content delivery" }
+- { name: "Shield and WAF",     cat: cloud,    glyph: webshield, did: "Edge and web application protection" }
+- { name: "Site-to-Site VPN",   cat: cloud,    glyph: tunnel,    did: "Private connectivity into AWS" }
+- { name: "Azure",              cat: cloud,    glyph: cloud,     did: "Cloud platform; the lab's Azure side" }
+
+- { name: "Dynatrace",          cat: ops,      glyph: pulse,     did: "Monitoring coverage and thresholds, then the contract itself", where: "Toyota, via Beyondsoft", when: "2021 to 2026" }
+- { name: "PagerDuty",          cat: ops,      glyph: pager,     did: "Escalation and routing policies, then the contract itself", where: "Toyota, via Beyondsoft", when: "2021 to 2026" }
+- { name: "Power Automate",     cat: ops,      glyph: flow,      did: "The AWS cost and tagging reporting; next, the lab's evidence flows", where: "Toyota, via Beyondsoft", when: "2023 to 2026" }
+- { name: "SCCM",               cat: ops,      glyph: deploy,    did: "Security clients and patches across endpoints", where: "Cigna HealthCare", when: "2014 to 2019" }
+- { name: "FACETS",             cat: ops,      glyph: record,    did: "The core patient information system behind the HIPAA audit work", where: "Cigna HealthCare", when: "2014 to 2019" }
+- { name: "PXE imaging",        cat: ops,      glyph: disc,      did: "Imaged and deployed 300+ machines for a 1,500-agent sales force", where: "Commonwealth-Altadis", when: "2013 to 2014" }
+- { name: "Jenkins",            cat: ops,      glyph: pipeline,  did: "Build and release pipelines" }
+- { name: "KACE",               cat: ops,      glyph: boxes,     did: "Endpoint and asset management" }
+- { name: "Password Safe",      cat: ops,      glyph: vault,     did: "Privileged password management" }
+- { name: "Windows Server",     cat: ops,      glyph: server,    did: "Server administration" }
+- { name: "Hyper-V",            cat: ops,      glyph: layers,    did: "Virtualization" }
+- { name: "VMware",             cat: ops,      glyph: layers,    did: "Virtualization" }
+- { name: "Linux",              cat: ops,      glyph: terminal,  did: "Administration; the lab's Ubuntu endpoints run on it" }
+
+- { name: "Proxmox",            cat: lab,      glyph: rack,      did: "The lab host: every virtual machine runs here", where: "The lab" }
+- { name: "OPNsense",           cat: lab,      glyph: wall,      did: "The lab's segments and the rules between them", where: "The lab" }
+- { name: "Compliance Manager", cat: lab,      glyph: clipboard, did: "SOC 2 and FedRAMP Moderate assessments, evidence per control", where: "The lab" }
+- { name: "Entra PIM",          cat: lab,      glyph: clockkey,  did: "Just-in-time admin roles, with activations as evidence", where: "The lab" }
+- { name: "Intune",             cat: lab,      glyph: laptop,    did: "Device compliance policies: encryption, patch level, screen lock", where: "The lab" }
+- { name: "Azure Policy",       cat: lab,      glyph: compass,   did: "The configuration baseline, with drift flagged", where: "The lab" }
+- { name: "Defender for Cloud", cat: lab,      glyph: cloudshield, did: "Regulatory compliance view for the Azure side", where: "The lab" }
+- { name: "Purview Audit",      cat: lab,      glyph: log,       did: "Who changed what and when, for change evidence", where: "The lab" }
+- { name: "Power BI",           cat: lab,      glyph: bars,      did: "The control-health view", where: "The lab" }

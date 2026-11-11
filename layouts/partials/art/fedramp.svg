@@ -1,0 +1,22 @@
+{{- /* Writeup illustration, FedRAMP Moderate readiness: a readiness gauge with the Low, Moderate and High baselines on
+       the dial and the needle settling in Moderate, beside the POA&M with its items closing and one still open.
+       Animated by the art rules in assets/css/site/95-spotlight.css; decorative, so hidden from screen readers. */ -}}
+<svg class="art art-fedramp" viewBox="0 0 360 220" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<rect x="20" y="58" width="178" height="140" rx="12" fill="var(--art-bg)"/>
+<path d="M54 150A64 64 0 0 1 86 94.6" stroke-width="9" stroke-linecap="butt" opacity=".3"/>
+<path d="M86 94.6A64 64 0 0 1 150 94.6" stroke="var(--sec)" stroke-width="9" stroke-linecap="butt"/>
+<path d="M150 94.6A64 64 0 0 1 182 150" stroke-width="9" stroke-linecap="butt" opacity=".3"/>
+<path d="M72 150h8M118 100v8M160 150h8" stroke-width="2.2" opacity=".6"/>
+<g class="nf"><path d="M118 150L66 150" stroke="var(--sec)"/></g>
+<circle cx="118" cy="150" r="5" fill="currentColor" stroke="none"/>
+<path d="M60 182h116" stroke-width="2.2" opacity=".5"/>
+<rect x="214" y="30" width="118" height="164" rx="10" fill="var(--art-bg)"/>
+<rect x="252" y="22" width="42" height="16" rx="4" fill="var(--art-bg)"/>
+<rect x="230" y="62" width="16" height="16" rx="3"/><path d="M256 70h58" stroke-width="2.4" opacity=".6"/>
+<rect x="230" y="94" width="16" height="16" rx="3"/><path d="M256 102h46" stroke-width="2.4" opacity=".6"/>
+<rect x="230" y="126" width="16" height="16" rx="3"/><path d="M256 134h54" stroke-width="2.4" opacity=".6"/>
+<rect class="led led-3" x="230" y="158" width="16" height="16" rx="3" fill="var(--amber)" stroke="none"/><path d="M256 166h40" stroke-width="2.4" opacity=".6"/>
+<path class="chk chk-1" d="M232 70l5 5 9-11" stroke="var(--sec)" stroke-dasharray="22" stroke-dashoffset="22"/>
+<path class="chk chk-2" d="M232 102l5 5 9-11" stroke="var(--sec)" stroke-dasharray="22" stroke-dashoffset="22"/>
+<path class="chk chk-3" d="M232 134l5 5 9-11" stroke="var(--sec)" stroke-dasharray="22" stroke-dashoffset="22"/>
+</svg>

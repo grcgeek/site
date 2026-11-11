@@ -1,13 +1,22 @@
 {{- /* Home status above the name. heroStatusStyle = "editorial" in params.toml:
        a pinned print of your photo with a caption beside it, STATUS and the
-       status in the statement's serif italic. Without it, the original pill
-       (40-hero.css). Styles: 41-status.css. */ -}}
+       status in the statement's serif italic. With heroStatusRole set, the
+       caption is the status word, then the title and employer, and it is not
+       a link. Without the style,
+       the original pill (40-hero.css). Styles: 41-status.css. */ -}}
 {{- $s := partial "status/data.html" . -}}
 {{- if eq (site.Params.heroStatusStyle | default "") "editorial" }}
+{{- if $s.role }}
+<div class="hs-ed hs-ed--role landing-rise landing-rise-1">
+  <span class="hs-ed__photo">{{ with $s.faceL }}<img src="{{ . }}" width="96" height="96" alt="" decoding="async">{{ end }}<span class="st-dot st-dot--badge" aria-hidden="true"></span></span>
+  <span class="hs-ed__cap"><span class="hs-ed__k">Status</span><em class="hs-ed__t">{{ lower $s.text }}</em><span class="hs-ed__role">{{ $s.role }}{{ with $s.org }} <span class="hs-ed__org">·&nbsp;{{ . }}</span>{{ end }}</span></span>
+</div>
+{{- else }}
 <a class="hs-ed landing-rise landing-rise-1" href="{{ $s.href }}">
   <span class="hs-ed__photo">{{ with $s.faceL }}<img src="{{ . }}" width="96" height="96" alt="" decoding="async">{{ end }}<span class="st-dot st-dot--badge" aria-hidden="true"></span></span>
   <span class="hs-ed__cap"><span class="hs-ed__k">Status</span><em class="hs-ed__t">{{ lower $s.text }}</em><span class="hs-ed__more">See what I am looking for <span aria-hidden="true">↓</span></span></span>
 </a>
+{{- end }}
 {{- else }}
 <p class="hero-status landing-rise landing-rise-1">
   {{ with $s.face }}<img class="hero-status__face" src="{{ . }}" width="48" height="48" alt="" decoding="async">{{ end }}

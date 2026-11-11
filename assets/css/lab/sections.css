@@ -36,4 +36,13 @@ html:not(.dark) .lab .tbl th { border-bottom-color: rgba(93, 66, 190, .25); }
 .lab .tbl td:first-child { font: 500 .8rem var(--mono); color: rgb(var(--ink)); white-space: nowrap; }
 .lab .tbl tr:last-child td { border-bottom: 0; }
 @media (max-width: 980px) { .lab .layout { grid-template-columns: minmax(0, 1fr); } .lab .ltoc { display: none; } }
+/* phones: each table row stacks, the first column becomes a label above its text */
+@media (max-width: 640px) {
+  .lab .tbl table { min-width: 0; }
+  .lab .tbl thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .lab .tbl tr, .lab .tbl td { display: block; }
+  .lab .tbl td:first-child { white-space: normal; padding: .8rem .9rem .15rem; border-bottom: 0; }
+  .lab .tbl td:last-child { padding: 0 .9rem .8rem; }
+  .lab .tbl tr:last-child td:last-child { border-bottom: 0; }
+}
 

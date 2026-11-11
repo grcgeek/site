@@ -1034,6 +1034,7 @@ html[data-astral="true"]:not(.dark) .connect {
 }
 
 .dark .connect__line { color: rgb(var(--color-neutral-300)); }
+.connect__line p + p { margin-top: 0.6rem; }
 
 .connect__btn {
   display: inline-flex;

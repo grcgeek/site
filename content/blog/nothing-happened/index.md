@@ -61,7 +61,7 @@ Then the one I'm new at. Own something end to end outside of work. Small is fine
 
 It's my "own something" thing.
 
-There's a home lab. It runs on my old gaming desktop, which has been retired from gaming and wasn't consulted. On it lives a very small pretend company: a domain controller, a few Windows and Linux machines, a firewall, and a network carved into segments. That company is wired to a Microsoft 365 tenant running Defender XDR, Sentinel, and Purview, with Entra ID holding the whole thing together.
+There's a home lab. It runs on my old gaming desktop, which has been retired from gaming and wasn't consulted. On it lives a very small pretend company: a domain controller, a few Windows and Linux machines, a firewall, and a network carved into segments. That company is wired to a Microsoft 365 tenant with Entra ID holding the whole thing together. (Update, November: the lab's job has changed since I wrote this. The current plan is on the [Homelab]({{< ref "homelab" >}}) page.)
 
 I will write up what I do with it, including the parts that go badly. I've already changed my mind on the lab's direction more times than I'd like to admit, mostly before installing anything. I also own a firewall that turned out to need a paid license before it will pass a single packet, which I will likely sell and put into my RAM upgrade piggy bank.
 

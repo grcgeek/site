@@ -1,0 +1,22 @@
+{{- /* Writeup illustration, third-party risk: the vendor's SOC 2 report with its seal and the risk rating stamped on it,
+       the questionnaire ticked off, and the bridge letter drawn as a bridge between the report's period end and today.
+       Animated by the art rules in assets/css/site/95-spotlight.css; decorative, so hidden from screen readers. */ -}}
+<svg class="art art-tprm" viewBox="0 0 360 220" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<rect x="28" y="20" width="130" height="180" rx="10" fill="var(--art-bg)"/>
+<path d="M46 44h50" stroke="var(--sec)"/>
+<path d="M46 64h94M46 78h78M46 92h94M46 106h60" stroke-width="2.2" opacity=".6"/>
+<circle cx="128" cy="44" r="12" stroke="var(--sec)"/><circle cx="128" cy="44" r="5" fill="var(--sec-soft)" stroke="none"/>
+<g class="stamp"><rect x="50" y="130" width="86" height="40" rx="7" stroke="var(--sec)" transform="rotate(-9 93 150)"/><path d="M64 144h56M66 158h40" stroke="var(--sec)" transform="rotate(-9 93 150)"/></g>
+<rect x="190" y="20" width="142" height="80" rx="10" fill="var(--art-bg)"/>
+<rect x="204" y="34" width="13" height="13" rx="3"/><path d="M228 40h84" stroke-width="2.2" opacity=".6"/>
+<rect x="204" y="54" width="13" height="13" rx="3"/><path d="M228 60h66" stroke-width="2.2" opacity=".6"/>
+<rect x="204" y="74" width="13" height="13" rx="3"/><path d="M228 80h78" stroke-width="2.2" opacity=".6"/>
+<path class="chk chk-1" d="M206 41l4 4 7-9" stroke="var(--sec)" stroke-width="2.6" stroke-dasharray="22" stroke-dashoffset="22"/>
+<path class="chk chk-2" d="M206 61l4 4 7-9" stroke="var(--sec)" stroke-width="2.6" stroke-dasharray="22" stroke-dashoffset="22"/>
+<path class="chk chk-4" d="M206 81l4 4 7-9" stroke="var(--sec)" stroke-width="2.6" stroke-dasharray="22" stroke-dashoffset="22"/>
+<rect x="190" y="156" width="46" height="42" rx="6" fill="var(--art-bg)"/><path d="M190 168h46" stroke="var(--sec)"/><path d="M202 182h8M218 182h8M202 190h8" stroke-width="2.2" opacity=".6"/>
+<rect x="286" y="156" width="46" height="42" rx="6" fill="var(--art-bg)"/><path d="M286 168h46" stroke="var(--sec)"/><path d="M298 182h8M314 182h8M298 190h8" stroke-width="2.2" opacity=".6"/>
+<path d="M236 176h50" stroke-width="2.4" opacity=".35"/>
+<path d="M236 160q25-44 50 0" stroke-width="2.4" opacity=".35"/>
+<path class="flow" d="M236 160q25-44 50 0" stroke="var(--sec)" stroke-dasharray="5 7"/>
+</svg>

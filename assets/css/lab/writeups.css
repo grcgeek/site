@@ -91,6 +91,8 @@ html.dark .lab .evidence .skill { background: rgba(var(--p400), .35); color: rgb
 .lab .tag.t-detection i { background: rgb(var(--p400)); }
 .lab .tag.t-ctf i { background: var(--amber); }
 .lab .tag.t-vuln i { background: #f97316; }
+.lab .tag.t-audit i { background: #14b8a6; }
+.lab .tag.t-grc i { background: #8b5cf6; }
 
 /* --- one writeup (layouts/writeups/single.html) ---------------------------- */
 .lab .banner { overflow: hidden; margin: 1.2rem 0 2rem; }

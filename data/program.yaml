@@ -5,10 +5,11 @@
 # non-draft writeup has `project:` set to its key, so never set that here.
 # Drafts are not built on the live site, which is why "drafting" has to be
 # set by hand.
-- { key: seg,      name: "Network segmentation",                    phase: "Build the lab",  status: planned }
-- { key: defend,   name: "Endpoint and email defense",              phase: "Security",       status: planned }
-- { key: exposure, name: "Exposure and vulnerability management",   phase: "Security",       status: planned }
-- { key: soc,      name: "SOC detections, hunting and response",    phase: "SOC",            status: planned }
-- { key: purview,  name: "Purview data protection and compliance",  phase: "Compliance",     status: planned }
-- { key: ir,       name: "Incident response reports",               phase: "Practice",       status: planned }
-- { key: ctf,      name: "CTF writeups",                            phase: "Practice",       status: planned }
+- { key: itgc,    name: "ITGC test of logical access",         phase: "Test the control",     status: drafting }
+- { key: soc2,    name: "SOC 2 control matrix and readiness",  phase: "Build the program",    status: planned }
+- { key: seg,     name: "Lab foundation",                      phase: "Build the lab",        status: planned }
+- { key: fedramp, name: "FedRAMP Moderate readiness",          phase: "Assess",               status: planned }
+- { key: tprm,    name: "Third-party risk assessment",         phase: "Assess",               status: planned }
+- { key: msev,    name: "Microsoft evidence layer",            phase: "Automate the evidence", status: planned }
+- { key: ir,      name: "Incident response reports",           phase: "Practice",             status: planned }
+- { key: ctf,     name: "CTF writeups",                        phase: "Practice",             status: planned }

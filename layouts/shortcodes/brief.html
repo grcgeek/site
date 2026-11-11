@@ -1,0 +1,28 @@
+{{- /* Homelab engagement brief: the lab in one glance, under the lede. Facts
+       as a small grid (label :: value), then numbered goals, then a one-line
+       note.
+
+       {{< brief facts="Auditee :: ... | Scope :: ..." goals="First goal | Second goal" note="..." >}}
+
+       Styles: .brief in assets/css/lab/homelab.css. */ -}}
+{{- $facts := .Get "facts" | default "" -}}
+{{- $goals := .Get "goals" | default "" -}}
+{{- $note := .Get "note" | default "" -}}
+<div class="brief not-prose">
+  {{- with $facts }}
+  <dl class="brief__facts">
+    {{- range split . "|" }}{{ $p := split (trim . " ") "::" }}{{ if ge (len $p) 2 }}
+    <div class="brief__fact glass"><dt>{{ trim (index $p 0) " " }}</dt><dd>{{ $.Page.RenderString (trim (index $p 1) " ") }}</dd></div>
+    {{- end }}{{ end }}
+  </dl>
+  {{- end }}
+  {{- with $goals }}
+  <p class="brief__k">Goals</p>
+  <ol class="brief__goals">
+    {{- range $i, $g := split . "|" }}
+    <li><span class="brief__n" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span><span>{{ $.Page.RenderString (trim $g " ") }}</span></li>
+    {{- end }}
+  </ol>
+  {{- end }}
+  {{- with $note }}<p class="brief__note">{{ $.Page.RenderString . }}</p>{{ end }}
+</div>

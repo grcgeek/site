@@ -293,6 +293,17 @@ html[data-lab="post"]:not(.dark) #main-content article > header h1 {
 :where(html[data-room="lab"]) .cf-5 { animation-delay: .9s; }
 :where(html[data-room="lab"]) .cf-6 { animation-delay: 2.4s; }
 :where(html[data-room="lab"]) .cf-7 { animation-delay: 1.6s; }
+
+/* the GRC illustrations (art/itgc, soc2, fedramp, tprm, msev) */
+:where(html[data-room="lab"]) .dock { animation: lx-dock 5s ease-in-out infinite; opacity: 0; }
+@keyframes lx-dock { 0% { transform: translate(0, 0); opacity: 0; } 14% { opacity: 1; } 50%, 80% { transform: translate(-49px, -74px); opacity: 1; } 100% { transform: translate(-49px, -74px); opacity: 0; } }
+:where(html[data-room="lab"]) .nf { transform-origin: 118px 150px; animation: lx-nf 4.2s ease-in-out infinite; }
+@keyframes lx-nf { 0%, 100% { transform: rotate(6deg); } 42% { transform: rotate(104deg); } 56% { transform: rotate(92deg); } 70% { transform: rotate(110deg); } }
+:where(html[data-room="lab"]) .stamp { transform-box: fill-box; transform-origin: center; opacity: 0; animation: lx-stamp 4.4s ease-in infinite; }
+@keyframes lx-stamp { 0%, 36% { transform: scale(1.9); opacity: 0; } 46% { transform: scale(1); opacity: 1; } 86% { opacity: 1; } 100% { transform: scale(1); opacity: 0; } }
+:where(html[data-room="lab"]) .hub { transform-origin: 190px 110px; animation: lx-spin 5s linear infinite; }
+:where(html[data-room="lab"]) .drawer { animation: lx-drawer 3.2s ease-in-out infinite; }
+@keyframes lx-drawer { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-9px); } }
 @keyframes lx-confetti { 0% { transform: translateY(-10px) rotate(0); opacity: 0; } 10% { opacity: 1; } 100% { transform: translateY(90px) rotate(300deg); opacity: 0; } }
 
 /* --- light mode: contrast fixes --------------------------------------------

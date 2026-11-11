@@ -1,0 +1,72 @@
+/* --- Skills & Tools strip (layouts/shortcodes/toolbox.html, assets/js/toolbox.js) ---
+   Same idea as the original logo marquee: icon over label, no boxes, faded
+   edges. Two rows run in opposite directions; hover or focus pauses both.
+   Icons rest in a neutral tone. On hover, or when the script lights one while
+   the strip is idle, the glyph redraws its lines in its category colour and
+   lifts. Category colours are rgb triplets, lighter in dark mode. */
+.tbx {
+  --tbx-grc: 93, 66, 190; --tbx-identity: 13, 128, 117; --tbx-security: 190, 63, 143;
+  --tbx-cloud: 37, 99, 168; --tbx-ops: 161, 98, 7; --tbx-lab: 47, 125, 50;
+  position: relative; display: grid; gap: 1.4rem; margin: 2.5rem 0; padding: .6rem 0; overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+html.dark .tbx {
+  --tbx-grc: 183, 166, 247; --tbx-identity: 94, 234, 212; --tbx-security: 228, 131, 195;
+  --tbx-cloud: 125, 183, 240; --tbx-ops: 251, 191, 36; --tbx-lab: 134, 217, 147;
+}
+.tbx--grc { --c: var(--tbx-grc); }
+.tbx--identity { --c: var(--tbx-identity); }
+.tbx--security { --c: var(--tbx-security); }
+.tbx--cloud { --c: var(--tbx-cloud); }
+.tbx--ops { --c: var(--tbx-ops); }
+.tbx--lab { --c: var(--tbx-lab); }
+
+.tbx__track { display: flex; width: max-content; animation: tbx-scroll var(--tbx-speed, 90s) linear infinite; }
+.tbx__row--r .tbx__track { animation-direction: reverse; animation-duration: calc(var(--tbx-speed, 90s) * 1.15); }
+.tbx:hover .tbx__track, .tbx:focus-within .tbx__track { animation-play-state: paused; }
+@keyframes tbx-scroll { to { transform: translateX(-50%); } }
+
+.tbx__group { display: flex; align-items: flex-start; gap: 2.4rem; margin: 0; padding: 0 1.2rem; list-style: none; }
+.tbx__item { flex: none; width: 5.4rem; display: flex; flex-direction: column; align-items: center; gap: .5rem; margin: 0; }
+
+.tbx__ico { display: grid; place-items: center; height: 2.4rem; color: rgb(var(--color-neutral-500)); transition: color .3s ease, transform .3s ease, filter .3s ease; }
+html.dark .tbx__ico { color: rgb(var(--color-neutral-400)); }
+.tbx .tb-glyph { width: 2.15rem; height: 2.15rem; overflow: visible; }
+.tbx .tb-glyph--logo { fill: currentColor; stroke: none; }
+
+.tbx__name { font-size: .7rem; line-height: 1.15; text-align: center; color: rgb(var(--color-neutral-500)); transition: color .3s ease; }
+html.dark .tbx__name { color: rgb(var(--color-neutral-400)); }
+
+/* lit: on hover, or picked by the script while idle */
+.tbx__item:hover .tbx__ico, .tbx__item.is-lit .tbx__ico {
+  color: rgb(var(--c)); transform: translateY(-3px) scale(1.06);
+  filter: drop-shadow(0 4px 10px rgba(var(--c), .35));
+}
+.tbx__item:hover .tbx__name, .tbx__item.is-lit .tbx__name { color: rgb(var(--c)); }
+.tbx__item:hover .tb-glyph > *, .tbx__item.is-lit .tb-glyph > * {
+  stroke-dasharray: 1; animation: tbx-draw .9s cubic-bezier(.45, .05, .25, 1) both;
+}
+.tbx__item:hover .tb-glyph > :nth-child(2), .tbx__item.is-lit .tb-glyph > :nth-child(2) { animation-delay: .08s; }
+.tbx__item:hover .tb-glyph > :nth-child(3), .tbx__item.is-lit .tb-glyph > :nth-child(3) { animation-delay: .16s; }
+.tbx__item:hover .tb-glyph > :nth-child(n+4), .tbx__item.is-lit .tb-glyph > :nth-child(n+4) { animation-delay: .24s; }
+@keyframes tbx-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+
+.tbx:focus-visible { outline: 2px solid rgb(var(--color-primary-600)); outline-offset: 4px; border-radius: .4rem; }
+html.dark .tbx:focus-visible { outline-color: rgb(var(--color-primary-400)); }
+
+@media (max-width: 640px) {
+  .tbx { gap: 1.1rem; }
+  .tbx__group { gap: 1.6rem; }
+  .tbx__item { width: 4.8rem; }
+  .tbx .tb-glyph { width: 1.9rem; height: 1.9rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tbx { -webkit-mask-image: none; mask-image: none; }
+  .tbx__row { overflow-x: auto; }
+  .tbx__track { animation: none; }
+  .tbx__group[aria-hidden="true"] { display: none; }
+  .tbx__ico, .tbx__name { transition: none; }
+  .tbx__item:hover .tbx__ico, .tbx__item.is-lit .tbx__ico { transform: none; }
+  .tbx__item:hover .tb-glyph > *, .tbx__item.is-lit .tb-glyph > * { animation: none; }
+}

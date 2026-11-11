@@ -66,7 +66,7 @@
   <section class="pm glass lit" aria-labelledby="pm-h">
     <div class="pm__head">
       <div><h2 id="pm-h">The lab program</h2>
-        <p>Nine writeups that follow one plan: build a lab, attack it, investigate, then write the detections.</p></div>
+        <p>{{ len . }} writeups that follow one plan: test a control, build the program around it, assess the rest, then make the evidence collect itself.</p></div>
       <div class="pm__meter"><span>{{ $nPub }} of {{ len . }} published</span>
         <div class="prog__bar" role="img" aria-label="{{ $nPub }} of {{ len . }} published"><i style="width:{{ div (mul 100.0 $nPub) (len .) | lang.FormatNumber 1 }}%"></i></div></div>
     </div>

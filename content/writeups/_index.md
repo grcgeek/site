@@ -1,6 +1,6 @@
 ---
 title: "Writeups"
-description: "Technical writeups: retired Hack The Box and TryHackMe boxes, LetsDefend and blue team labs, CTF postmortems, coursework and lab projects."
+description: "Writeups from my evidence bench: an ITGC workpaper, SOC 2 and FedRAMP Moderate readiness assessments, vendor risk, and the Microsoft evidence layer, plus IR reports and CTFs."
 showDate: false
 showAuthor: false
 showReadingTime: false
@@ -10,29 +10,29 @@ showWordCount: false
 
 The long form: how I worked a problem, what I decided and the evidence behind it. What lands here:
 
-- Walkthroughs of retired Hack The Box and TryHackMe boxes
-- LetsDefend and other blue team lab investigations
+- Workpapers and assessments from the [lab]({{< ref "homelab" >}}): a control tested end to end, SOC 2 and FedRAMP Moderate readiness, a vendor risk assessment, and the Microsoft tooling that collects the evidence
+- Incident response reports from retired Hack The Box and TryHackMe boxes and LetsDefend labs
 - CTF postmortems and lessons learned, after each event closes
-- Coursework and projects from the [lab]({{< ref "homelab" >}})
 
-Configs and detection rules go on [GitHub](https://github.com/grcgeek).
+The sanitized workpapers and reports go on [GitHub](https://github.com/grcgeek). Nothing here comes from my employer.
 
 ## What's planned
 
-The lab's four Microsoft projects, plus practice investigations and CTFs. Each project ends in at least one writeup here.
+Five lab projects, the lab build behind them, and practice investigations. Each project ends in at least one writeup here, with its workpaper linked.
 
 | Writeup | Covers | Source |
 |---|---|---|
-| Network segmentation | The lab's segments, the OPNsense rules between them, and why the malware segment has no way out | Lab |
-| Endpoint and email defense | Attack surface reduction, attack and phishing simulations against lab endpoints and mailboxes, and what Defender caught and missed | Project 1 |
-| Exposure and vulnerability management | Defender Vulnerability Management on the lab hosts, ranked by real-world exploitation, and one finding followed to a fix verified by rescan | Project 2 |
-| SOC detections, hunting and response | KQL detections in Microsoft Sentinel and how they were tested, a hunt, and one Defender XDR incident written up as a client report | Project 3 |
-| Purview data protection and compliance | Sensitivity labels and DLP on lab data, an Audit and eDiscovery investigation, and a Compliance Manager assessment | Project 4 |
-| Incident response reports | Full investigations from retired boxes and blue team labs (Hack The Box, TryHackMe, LetsDefend): summary, timeline, IOCs, ATT&CK mapping, remediation | Practice |
+| ITGC test of logical access | The risk and control matrix, how the population and sample were pulled from Entra ID, the test of design and operating effectiveness, and the finding memo, mapped to SOC 2 CC6 and 800-53 AC | Project&nbsp;1 |
+| SOC 2 control matrix and readiness | The Trust Services Criteria mapped to the fictional company's controls, the gap list, the policies written to close it, and the request list an auditor would send | Project&nbsp;2 |
+| FedRAMP Moderate readiness | The 800-53 Moderate baseline scoped to the system, the evidence requested per control, the readiness score and the POA&M, presented as an assessment rather than a build | Project&nbsp;3 |
+| Third-party risk assessment | One vendor questionnaire reviewed, a SOC 2 report read critically, the bridge letter checked, and the risk rating with a decision memo | Project&nbsp;4 |
+| Microsoft evidence layer | Compliance Manager assessments, scheduled access reviews and PIM, Azure Policy and Intune compliance, Purview Audit, and the Power Automate flows that file it all into an evidence library with a Power BI control-health view | Project&nbsp;5 |
+| Lab foundation | The company network, its segments, and the firewall rules between them, exported as configuration evidence | Lab |
+| Incident response reports | Full investigations from retired boxes and blue team labs (Hack The Box, TryHackMe, LetsDefend): summary, timeline, IOCs, remediation | Practice |
 | CTF writeups | Challenges from scored competitions: approach, tools and what I would do differently. Published after an event closes, and only where its rules allow | {{< ctf-link >}} |
 
 {{< soon title="Nothing published yet" status="drafting" >}}
-First up are incident response reports, since they need no lab build, then segmentation and the Defender and Sentinel projects as the tenant comes online.
+First up is the ITGC workpaper, since it needs only the tenant, then the SOC 2 control matrix. The FedRAMP assessment and the evidence layer follow once those two are published.
 
-In the meantime, the [Homelab]({{< ref "homelab" >}}) page tracks build status, and the [Blog]({{< ref "blog" >}}) will carry the shorter reasoning behind decisions.
+In the meantime, the [Homelab]({{< ref "homelab" >}}) page tracks build status, and the [Blog]({{< ref "blog" >}}) carries the shorter reasoning behind decisions.
 {{< /soon >}}

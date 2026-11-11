@@ -1,5 +1,7 @@
 {{- /* Shared availability data for the status partials. Text and roles come
-       from content/_index.md (heroStatus, heroStatusRoles). */ -}}
+       from content/_index.md (heroStatus, heroStatusRoles). heroStatusRole,
+       when set, switches both partials to "role only": the status word, then
+       the title, the employer (heroStatusOrg) and a sub line, no invitation. */ -}}
 {{- $h := site.Home -}}
 {{- $face := "" -}}{{- $faceL := "" -}}
 {{- with resources.Get (site.Params.Author.image | default "img/author-avatar.jpg") -}}
@@ -8,10 +10,14 @@
 {{- end -}}
 {{- $li := "" -}}
 {{- range site.Params.Author.links }}{{ with .linkedin }}{{ $li = . }}{{ end }}{{ end -}}
+{{- $org := $h.Params.heroStatusOrg | default "" -}}
 {{- return (dict
   "text" ($h.Params.heroStatus | default "Open to new roles")
   "roles" ($h.Params.heroStatusRoles | default slice)
+  "role" ($h.Params.heroStatusRole | default "")
+  "org" $org
+  "sub" ($h.Params.heroStatusSub | default "")
   "face" $face "faceL" $faceL
   "name" site.Params.Author.name
-  "href" ("/#open-to-whats-next" | relURL)
+  "href" ("/#open-bridge" | relURL)
   "linkedin" $li) -}}

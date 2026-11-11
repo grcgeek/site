@@ -1,0 +1,19 @@
+{{- /* Writeup illustration, SOC 2 control matrix: criteria down the side, controls across, cells filled where a control
+       covers a criterion, one gap blinking amber, and the policy written to close it docking into the gap. Animated by the
+       art rules in assets/css/site/95-spotlight.css; decorative, so hidden from screen readers. */ -}}
+<svg class="art art-soc2" viewBox="0 0 360 220" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<rect x="14" y="14" width="332" height="166" rx="12" fill="var(--art-bg)"/>
+<rect x="28" y="49" width="30" height="14" rx="4" fill="var(--sec-soft)" stroke="none"/>
+<rect x="28" y="83" width="30" height="14" rx="4" fill="var(--sec-soft)" stroke="none"/>
+<rect x="28" y="117" width="30" height="14" rx="4" fill="var(--sec-soft)" stroke="none"/>
+<rect x="28" y="151" width="30" height="14" rx="4" fill="var(--sec-soft)" stroke="none"/>
+<path d="M87 30v4M129 30v4M171 30v4M213 30v4M255 30v4M297 30v4" stroke-width="2.4" opacity=".5"/>
+<g stroke-width="2.2">
+<rect x="70" y="44" width="34" height="24" rx="4" fill="var(--sec-soft)"/><rect x="112" y="44" width="34" height="24" rx="4"/><rect x="154" y="44" width="34" height="24" rx="4" fill="var(--sec-soft)"/><rect x="196" y="44" width="34" height="24" rx="4" fill="var(--sec-soft)"/><rect x="238" y="44" width="34" height="24" rx="4"/><rect x="280" y="44" width="34" height="24" rx="4" fill="var(--sec-soft)"/>
+<rect x="70" y="78" width="34" height="24" rx="4"/><rect x="112" y="78" width="34" height="24" rx="4" fill="var(--sec-soft)"/><rect x="154" y="78" width="34" height="24" rx="4" fill="var(--sec-soft)"/><rect x="196" y="78" width="34" height="24" rx="4"/><rect x="238" y="78" width="34" height="24" rx="4" fill="var(--sec-soft)"/><rect x="280" y="78" width="34" height="24" rx="4" fill="var(--sec-soft)"/>
+<rect x="70" y="112" width="34" height="24" rx="4" fill="var(--sec-soft)"/><rect x="112" y="112" width="34" height="24" rx="4" fill="var(--sec-soft)"/><rect x="154" y="112" width="34" height="24" rx="4"/><rect x="196" y="112" width="34" height="24" rx="4" fill="var(--sec-soft)"/><rect x="280" y="112" width="34" height="24" rx="4" fill="var(--sec-soft)"/>
+<rect x="70" y="146" width="34" height="24" rx="4" fill="var(--sec-soft)"/><rect x="112" y="146" width="34" height="24" rx="4"/><rect x="154" y="146" width="34" height="24" rx="4" fill="var(--sec-soft)"/><rect x="196" y="146" width="34" height="24" rx="4" fill="var(--sec-soft)"/><rect x="238" y="146" width="34" height="24" rx="4" fill="var(--sec-soft)"/><rect x="280" y="146" width="34" height="24" rx="4"/>
+</g>
+<rect class="led led-2" x="238" y="112" width="34" height="24" rx="4" stroke="var(--amber)" stroke-width="2.6" stroke-dasharray="5 4"/>
+<g class="dock"><rect x="286" y="178" width="36" height="40" rx="4" fill="var(--art-bg)" stroke="var(--sec)"/><path d="M294 190h20M294 198h14M294 206h18" stroke="var(--sec)" stroke-width="2.2"/></g>
+</svg>

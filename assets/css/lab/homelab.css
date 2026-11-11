@@ -4,6 +4,19 @@
    assets/css/site/95-spotlight.css. Light-mode label colours use the --lx-*
    tokens set there, falling back to the dark values. */
 
+/* the brief under the lede (shortcodes/brief.html) */
+.lab .brief { margin: 1.1rem 0 0; max-width: 46rem; display: grid; gap: 1rem; }
+.lab .brief__facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; margin: 0; }
+.lab .brief__fact { padding: .6rem .85rem; border-radius: .7rem; }
+.lab .brief__fact dt { margin: 0 0 .15rem; font: 500 .68rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--lx-teal, #5EEAD4); }
+.lab .brief__fact dd { margin: 0; font-size: .92rem; line-height: 1.45; color: rgb(var(--ink)); }
+.lab .brief__k { margin: .2rem 0 -.5rem; font: 500 .68rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--lx-teal, #5EEAD4); }
+.lab .brief__goals { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
+.lab .brief__goals li { display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); align-items: baseline; margin: 0; font-size: .98rem; line-height: 1.5; color: rgb(var(--body)); }
+.lab .brief__n { font: 500 .78rem var(--mono); color: var(--lx-magenta, #E483C3); }
+.lab .brief__note { margin: 0; font: 400 .8rem var(--mono); color: rgb(var(--muted)); }
+@media (max-width: 560px) { .lab .brief__facts { grid-template-columns: minmax(0, 1fr); } }
+
 /* build status (shortcodes/pipeline.html) */
 .lab .pipe { display: flex; flex-direction: column; gap: .7rem; margin: 0 0 1rem; }
 .lab .pipe__row { display: grid; grid-template-columns: 3.6rem minmax(0, 1fr); gap: 1rem; align-items: center; padding: .9rem 1.1rem; }
@@ -45,6 +58,7 @@ html:not(.dark) .lab .lspec__tags li { border-color: rgba(93, 66, 190, .4); }
 /* diagrams (shortcodes/network-diagram.html, vm-loop.html) */
 .lab .fig { margin: 1rem 0; padding: 1rem; }
 .lab .fig__scroll { overflow-x: auto; }
+@media (max-width: 640px) { .lab .fig::after { content: "swipe sideways for the whole diagram"; display: block; margin-top: .55rem; font: 500 .68rem var(--mono); letter-spacing: .04em; text-align: center; color: rgb(var(--muted)); } }
 .lab .net { width: 100%; min-width: 560px; height: auto; color: var(--lx-violet, #B7A6F7); display: block; }
 .lab .net .nt { font: 600 15px var(--display); fill: #ece8fa; stroke: none; }
 .lab .net .ns { font: 400 10px var(--mono); fill: #a49cc4; stroke: none; }
@@ -79,7 +93,10 @@ html:not(.dark) .lab .net text[fill="#5EEAD4"] { fill: #0F766E; }
 /* project panels in "tools" style: a security glyph over the project's
    tools, each a tag with its logo (one colour) where the tool has one */
 .lab .proj--kit { grid-template-columns: 12rem minmax(0, 1fr); }
-.lab .proj--kit .stage { aspect-ratio: auto; align-self: stretch; min-height: 7rem; padding: .8rem .6rem; flex-direction: column; gap: .6rem; }
+.lab .proj--kit .stage { aspect-ratio: auto; align-self: stretch; min-height: 7rem; padding: .7rem .5rem; flex-direction: column; justify-content: flex-start; gap: .55rem; }
+.lab .kit__art { display: block; width: 100%; line-height: 0; }
+.lab .kit__art .art { width: 100%; height: auto; }
+.lab .proj--kit:hover .kit__art { filter: drop-shadow(0 0 8px rgba(183, 166, 247, .35)); }
 .lab .kit__glyph { display: block; line-height: 0; color: var(--lx-magenta, #E483C3); }
 .lab .kit__glyph svg { width: 2.9rem; height: 2.9rem; }
 .lab .kit__marks { display: flex; flex-direction: column; align-items: center; gap: .3rem; }
@@ -98,7 +115,7 @@ html:not(.dark) .lab .kit__m { background: rgba(255, 255, 255, .75); border-colo
   .lab .proj--kit .stage { padding: .8rem .3rem; }
   .lab .kit__m { font-size: .6rem; white-space: normal; height: auto; min-height: 1.6rem; padding: .25rem .4rem; line-height: 1.2; text-align: center; }
 }
-@media (prefers-reduced-motion: reduce) { .lab .proj--kit:hover .kit__glyph { filter: none; } }
+@media (prefers-reduced-motion: reduce) { .lab .proj--kit:hover :is(.kit__glyph, .kit__art) { filter: none; } }
 
 /* resource plan (shortcodes/resource-plan.html) */
 .lab .mems { display: flex; flex-direction: column; gap: .7rem; margin: 1rem 0; }

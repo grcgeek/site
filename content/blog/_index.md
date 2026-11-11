@@ -17,6 +17,7 @@ I'm good at keeping systems up and bad at keeping records. Working on the second
 | Why I did not buy a used Dell | Rack servers are cheap until you price the power, the noise, and the drive caddies |
 | RAM ate my budget | Why the lab stays at 32GB, and what memory pricing cost the rest of the build |
 | The life of one finding | Finding a vulnerability is the easy part; the work is ownership, priority, and proof |
+| The SSCP, in one sitting | What the exam actually tests, and what ten years of ops already covered |
 
 {{< soon title="Drafts, not posts yet" status="writing" >}}
 Three pieces are written and sitting in drafts. They go up once they are worth your four minutes.

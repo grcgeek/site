@@ -7,7 +7,9 @@
  *    session. Skippable by click, the Skip button, Escape, Enter or Space.
  *    Never runs for reduced-motion users.
  * 2. Hero name: resolves out of random glyphs, then retypes, on every visit.
- *    Waits for the intro to finish when one is running.
+ *    Waits for the intro to finish when one is running. When the name comes to
+ *    rest it fires hero:rested on document (assets/js/hero-toast.js waits
+ *    for it), and fires it straight away when there is nothing to animate.
  */
 (function () {
   'use strict';
@@ -103,11 +105,16 @@
   }
 
   /* ---- 2. Hero name ----------------------------------------------------- */
+  function rested() {
+    window.__heroRested = true;
+    document.dispatchEvent(new CustomEvent('hero:rested'));
+  }
+
   function animateHero() {
-    if (reduced) return;
+    if (reduced) { rested(); return; }
     var el = document.querySelector('.hero-name[data-scramble]');
     var span = el && el.querySelector('.hero-name__text');
-    if (!span) return;
+    if (!span) { rested(); return; }
     var target = el.getAttribute('data-scramble') || span.textContent;
 
     el.setAttribute('data-scrambling', '');
@@ -140,7 +147,7 @@
         span.textContent = target.slice(0, ++j);
         if (j >= target.length) {
           clearInterval(fwd);
-          setTimeout(function () { el.removeAttribute('data-typing'); el.setAttribute('data-rested', ''); }, 700);
+          setTimeout(function () { el.removeAttribute('data-typing'); el.setAttribute('data-rested', ''); rested(); }, 700);
         }
       }, 32);
     }
