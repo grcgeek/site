@@ -12,12 +12,12 @@ build:
   publishResources: false
 ---
 
-{{< resume-head download="on" facts="Now :: IT Risk & Controls Analyst, Orlando | Experience :: Ten Plus Years in Enterprise IT | Languages :: English and Spanish, fluent | Studying :: SSCP Nov 2026 · CISSP next" hook="Ran the *systems*. Now I prove the *controls*." >}}
+{{< resume-head download="on" facts="Now :: IT Risk & Controls Analyst, Orlando | Experience :: Ten Plus Years in Enterprise IT | Languages :: English and Spanish, fluent | Certs :: SSCP passed · CISSP next" hook="Ran the *systems*. Now I prove the *controls*." >}}
 IT Risk & Controls Analyst at a cybersecurity company in Orlando: audit evidence and compliance records, evidence requests with auditors, remediation and exception tracking, policies and review schedules, vendor reviews and continuous monitoring submissions, in a SOC 2 and FedRAMP world. Before that, ten plus years in enterprise IT, most of it in regulated environments, split between keeping production running and keeping it secure: major incident management for Toyota Motor North America's production applications, leading an engineering team, the SIEM in TelevisaUnivision's security operations center, and identity and access across Microsoft environments.
 
-I ran the systems auditors test before I tested any. As a security analyst I tested controls for design and operating effectiveness against NIST CSF, mapped them to PCI DSS, tracked findings and risk acceptance in ServiceNow, and handled auditor requests. As an Operations Manager I supported the annual ISO 27001 review, reviewed client AWS accounts for misconfigurations, automated cost and tagging reporting across 160+ of them, administered access and MFA policy, and owned change management, vendor contracts and SLA reporting. At Cigna, I supplied the access evidence behind HIPAA audit cycles.
+Most of my career was on the side that gets audited. At TelevisaUnivision the compliance work was mostly control testing against NIST CSF, with PCI DSS alongside it, plus tracking findings and risk acceptance in ServiceNow and answering auditor requests. At Toyota I supported the annual ISO 27001 review, reviewed AWS accounts for misconfigurations, automated cost and tagging reporting across 160+ accounts, and handled access and MFA policy, change requests and SLA reporting. At Cigna I pulled the access evidence for HIPAA audits.
 
-That was the part of every job I kept volunteering for, so I made it the job. What I bring with it is the operations and stakeholder experience compliance teams usually have to hire around: getting evidence out of busy teams, delivering a finding nobody wants, and tracking remediation until it is closed. The SSCP is in November, the CISSP next, and the [lab]({{< ref "homelab" >}}) is where I go deeper than the day job allows.
+That compliance work was the part of every job I kept volunteering for, so now it is the job. I bring the operations side with me: getting evidence from busy teams, explaining findings clearly, and following remediation until it is closed. I passed the SSCP exam in November, the CISSP is next, and the [lab]({{< ref "homelab" >}}) is where I keep practicing.
 
 {{< /resume-head >}}
 
@@ -61,7 +61,7 @@ Grouped the way an IT general controls review groups them. Every item here is so
 
 {{< job company="TelevisaUnivision" dates="2019 to 2020" location="Onsite then remote · Doral, FL" >}}
 {{< role title="Information Security Analyst" tags="Control Testing, NIST CSF, PCI DSS, ServiceNow, Access Reviews, Vulnerability Management, Risk Acceptance, LogRhythm" >}}
-- Tested security controls for design and operating effectiveness against NIST CSF, mapped them to PCI DSS requirements to surface overlap and gaps, and coordinated audit evidence, documentation and auditor requests for security tooling through audit cycles.
+- Tested security controls for design and operating effectiveness against NIST CSF, with PCI DSS requirements in view, and coordinated audit evidence, documentation and auditor requests for security tooling through audit cycles.
 - Tracked control testing and remediation in ServiceNow, correlating findings to the CMDB to assign control owners, driving items to closure, and collecting closure evidence and log extracts for internal audit and compliance stakeholders.
 - Ran the vulnerability remediation and exception process: identified owning teams, assessed exploitability and business impact, followed up on exception requests, documented formal risk acceptance, and remediated directly on systems the security team managed.
 - Performed user access reviews and reviewed administrative and privileged account configurations to verify least-privilege adherence.
@@ -90,11 +90,11 @@ Grouped the way an IT general controls review groups them. Every item here is so
 
 ## Certifications {.h-minor}
 
-{{< certs class="certs--wide" groups="In progress :: ISC2 SSCP ~ progress ~ Exam Nov 2026, ISC2 CISSP ~ progress ~ Next · 2027 | Active :: LPI Linux Essentials ~ active ~ Lifetime, CompTIA Project+ ~ active ~ Lifetime, CompTIA Cloud Essentials+ ~ active ~ Lifetime, Azure AI Fundamentals (AI-900) ~ active ~ 2024 | Previously held :: Cisco CCNA Routing & Switching ~ held ~ 2020 to 2023, CompTIA Security+ ~ held ~ 2019 to 2022, Certified Ethical Hacker (CEH) ~ held ~ 2019 to 2022, AWS Certified Cloud Practitioner ~ held ~ 2019 to 2022, CompTIA A+ ~ held ~ 2018 to 2022, ITIL 4 Foundation ~ held ~ 2019 to 2023" >}}
+{{< certs class="certs--wide" groups="In progress :: ISC2 SSCP ~ progress ~ Passed · endorsement pending, ISC2 CISSP ~ progress ~ Next · 2027 | Active :: LPI Linux Essentials ~ active ~ Lifetime, CompTIA Project+ ~ active ~ Lifetime, CompTIA Cloud Essentials+ ~ active ~ Lifetime, Azure AI Fundamentals (AI-900) ~ active ~ 2024 | Previously held :: Cisco CCNA Routing & Switching ~ held ~ 2020 to 2023, CompTIA Security+ ~ held ~ 2019 to 2022, Certified Ethical Hacker (CEH) ~ held ~ 2019 to 2022, AWS Certified Cloud Practitioner ~ held ~ 2019 to 2022, CompTIA A+ ~ held ~ 2018 to 2022, ITIL 4 Foundation ~ held ~ 2019 to 2023" >}}
 
 ## Compliance and Frameworks {.h-minor}
 
-{{< certs seal="false" class="certs--wide" groups="Programs :: SOC 2, FedRAMP, ISO 27001, PCI DSS, HIPAA, CMS | Frameworks :: NIST SP 800-53, NIST CSF, ITIL v4, NIST SP 800-171 (self-study) | Controls work :: Control testing for design and operating effectiveness, Control mapping, Audit evidence and workpapers, User access reviews, Findings and exceptions tracked to closure, Vendor reviews, Continuous monitoring" >}}
+{{< certs seal="false" class="certs--wide" groups="Programs :: SOC 2, FedRAMP, ISO 27001, PCI DSS, HIPAA | Frameworks :: NIST SP 800-53, NIST CSF, ITIL v4, NIST SP 800-171 (self-study) | Controls work :: Control testing for design and operating effectiveness, Audit evidence and workpapers, User access reviews, Findings and exceptions tracked to closure, Vendor reviews, Continuous monitoring" >}}
 
 ## Tools and Platforms {.h-minor}
 

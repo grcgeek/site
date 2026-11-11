@@ -1,8 +1,10 @@
 // Home status note (layouts/partials/status/toast.html). Waits for the name
 // animation to come to rest (hero:rested from assets/js/intro.js), slides the
 // note in, keeps it up for HOLD ms (paused while pointed at or focused), then
-// slides it out. Shown once per browser session. The note's link scrolls to
-// the Open Bridge section and makes the connect card glow.
+// slides it out. Shown once per browser session on each page. On Home the
+// note's link scrolls to the Open Bridge section and makes the connect card
+// glow; on the Resume it opens LinkedIn. Pages without the name animation
+// start the note shortly after load.
 // In preview mode (all five designs on the page) the hash #t-<design> picks
 // the design, and changing the hash replays it.
 (function () {
@@ -12,7 +14,7 @@
   var preview = notes.length > 1;
   var reduced = false;
   try { reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
-  var KEY = 'ht-seen', DELAY = 450, HOLD = 7000, OUT = 650;
+  var KEY = 'ht-seen:' + location.pathname, DELAY = 450, HOLD = 7000, OUT = 650;
 
   if (!preview) {
     try { if (sessionStorage.getItem(KEY)) return; } catch (e) {}
@@ -97,6 +99,7 @@
     });
     var go = n.querySelector('.ht__go');
     if (go) go.addEventListener('click', function (e) {
+      if ((go.getAttribute('href') || '').charAt(0) !== '#') { hide(n); return; }
       var target = document.getElementById('open-bridge');
       if (!target) return;
       e.preventDefault();
@@ -116,7 +119,7 @@
 
   var shown = false;
   function go() { if (shown) return; shown = true; setTimeout(show, DELAY); }
-  if (window.__heroRested) go();
+  if (window.__heroRested || !document.querySelector('.hero-name')) setTimeout(go, 600);
   else document.addEventListener('hero:rested', go, { once: true });
   setTimeout(go, 9000); // safety net if the name never reports back
 

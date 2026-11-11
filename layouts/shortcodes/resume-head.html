@@ -64,11 +64,10 @@
       {{- end }}
     {{- else }}
       {{- with $linkedin }}
-      {{ partial "cta-button.html" (dict "url" . "label" "Request a tailored resume" "style" "primary") }}
+      {{ partial "cta-button.html" (dict "url" . "label" "Connect on LinkedIn" "style" "primary") }}
       {{- end }}
     {{- end }}
   </div>
-  {{- if not (and $offerPdf $pdf) }}
-  <p class="resume-head__note">I tailor my resume to each role. Message me on LinkedIn with the position and I'll send the right version.</p>
-  {{- end }}
 </div>
+{{- /* the status note, same design as Home (layouts/partials/status/toast.html) */ -}}
+{{- if site.Home.Params.heroToast }}{{ partial "status/toast.html" .Page }}{{ end }}

@@ -16,7 +16,7 @@
 - { name: "NIST SP 800-53",     cat: grc,      glyph: book,      did: "The control baseline under FedRAMP, and the lab's readiness assessment", where: "Current role and the lab" }
 - { name: "ISO 27001",          cat: grc,      glyph: seal,      did: "Annual review: identified risks, remediation plans and residual risk", where: "Toyota, via Beyondsoft", when: "2023 to 2026" }
 - { name: "NIST CSF",           cat: grc,      glyph: grid,      did: "Tested security controls for design and operating effectiveness", where: "TelevisaUnivision", when: "2019 to 2020" }
-- { name: "PCI DSS",            cat: grc,      glyph: card,      did: "Mapped tested controls to PCI DSS requirements to find overlap and gaps", where: "TelevisaUnivision", when: "2019 to 2020" }
+- { name: "PCI DSS",            cat: grc,      glyph: card,      did: "Kept in view alongside NIST CSF control testing", where: "TelevisaUnivision", when: "2019 to 2020" }
 - { name: "HIPAA",              cat: grc,      glyph: cross,     did: "Access records and evidence for compliance and audit teams", where: "Cigna HealthCare", when: "2014 to 2019" }
 - { name: "ServiceNow",         cat: grc,      glyph: ticket,    did: "Findings and remediation tied to CMDB owners; tickets and asset records", where: "TelevisaUnivision, Toyota, Commonwealth-Altadis" }
 - { name: "Excel",              cat: grc,      glyph: table,     did: "Analysis, populations, samples and workpapers" }

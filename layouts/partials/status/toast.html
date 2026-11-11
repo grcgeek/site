@@ -7,14 +7,18 @@
        heroToast in content/_index.md picks the design: ticket, page, stamp,
        terminal or print. heroToastPreview: true renders all five, and the
        page hash (#t-ticket, #t-page, ...) picks which one plays, for review.
+       The Resume page shows the same note (from shortcodes/resume-head.html),
+       starting a moment after load, and its button opens LinkedIn instead.
        Script: assets/js/hero-toast.js. Styles: assets/css/site/42-toast.css. */ -}}
 {{- $s := partial "status/data.html" . -}}
-{{- $p := .Params -}}
+{{- $p := site.Home.Params -}}
+{{- $home := .IsHome -}}
 {{- $role := $s.role | default "IT Risk & Controls Analyst" -}}
 {{- $org := $s.org | default "a cybersecurity company" -}}
-{{- $href := "#open-bridge" -}}
+{{- $href := cond $home "#open-bridge" ($s.linkedin | default "https://linkedin.com/in/cybercc") -}}
+{{- $ext := not $home -}}
 {{- $styles := slice "ticket" "page" "stamp" "terminal" "print" -}}
-{{- if not $p.heroToastPreview }}{{ $styles = slice ($p.heroToast | default "ticket") }}{{ end -}}
+{{- if or (not $p.heroToastPreview) (not $home) }}{{ $styles = slice ($p.heroToast | default "ticket") }}{{ end -}}
 {{- range $styles }}
 <aside class="ht ht--{{ . }}" data-ht="{{ . }}" aria-label="What's new" hidden>
   <button type="button" class="ht__x" aria-label="Dismiss"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
@@ -22,7 +26,7 @@
   <p class="ht__k"><i class="ht__dot" aria-hidden="true"></i>CHG-1130 · implemented</p>
   <p class="ht__t">New role: {{ $role }}</p>
   <p class="ht__s">Security GRC at {{ $org }} in Orlando. The bridge is still open.</p>
-  <a class="ht__go" href="{{ $href }}">Join the bridge <span aria-hidden="true">↓</span></a>
+  <a class="ht__go" href="{{ $href }}"{{ if $ext }} target="_blank" rel="noopener noreferrer"{{ end }}>Join the bridge <span aria-hidden="true">↓</span></a>
   <span class="ht__bar" aria-hidden="true"></span>
   {{- else if eq . "page" }}
   <div class="ht__row">
@@ -33,26 +37,31 @@
       <p class="ht__s">Not looking, always listening.</p>
     </div>
   </div>
-  <div class="ht__acts"><a class="ht__go" href="{{ $href }}">Answer</a><button type="button" class="ht__later">Later</button></div>
+  <div class="ht__acts"><a class="ht__go" href="{{ $href }}"{{ if $ext }} target="_blank" rel="noopener noreferrer"{{ end }}>Answer</a><button type="button" class="ht__later">Later</button></div>
   {{- else if eq . "stamp" }}
   <span class="ht__seal" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="27"/><circle cx="32" cy="32" r="21" stroke-dasharray="2 3"/><path class="ht__tick" pathLength="1" d="M22 33l7 7 14-15"/></svg></span>
   <div>
     <p class="ht__k">Verified · November 2026</p>
     <p class="ht__t">{{ $role }}</p>
     <p class="ht__s">The work is on the resume and the method is in the lab. The conversation is at the bottom.</p>
-    <a class="ht__go" href="{{ $href }}">Say hi <span aria-hidden="true">↓</span></a>
+    <a class="ht__go" href="{{ $href }}"{{ if $ext }} target="_blank" rel="noopener noreferrer"{{ end }}>Say hi <span aria-hidden="true">↓</span></a>
   </div>
   {{- else if eq . "terminal" }}
   <p class="ht__ln"><span class="ht__pr">$</span> whoami --now</p>
   <p class="ht__ln ht__out" data-type="{{ lower $role }} · security grc"></p>
-  <p class="ht__ln"><span class="ht__pr">$</span> <a class="ht__go" href="{{ $href }}">open bridge</a><span class="ht__car" aria-hidden="true"></span></p>
+  <p class="ht__ln"><span class="ht__pr">$</span> <a class="ht__go" href="{{ $href }}"{{ if $ext }} target="_blank" rel="noopener noreferrer"{{ end }}>open bridge</a><span class="ht__car" aria-hidden="true"></span></p>
   <span class="ht__sr">{{ $role }}, security GRC. Open the bridge at the bottom of the page.</span>
   {{- else if eq . "print" }}
   <span class="ht__photo">{{ with $s.faceL }}<img src="{{ . }}" width="96" height="96" alt="" decoding="async">{{ end }}</span>
   <div>
     <p class="ht__t">New chapter.</p>
+    {{- if $home }}
     <p class="ht__s">{{ $role }}, Security GRC. Come say hi at the bottom.</p>
-    <a class="ht__go" href="{{ $href }}">Open bridge <span aria-hidden="true">↓</span></a>
+    <a class="ht__go" href="{{ $href }}"{{ if $ext }} target="_blank" rel="noopener noreferrer"{{ end }}>Open bridge <span aria-hidden="true">↓</span></a>
+    {{- else }}
+    <p class="ht__s">{{ $role }}, Security GRC. The record is below; the conversation is on LinkedIn.</p>
+    <a class="ht__go" href="{{ $href }}" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+    {{- end }}
   </div>
   {{- end }}
 </aside>
